@@ -19,7 +19,8 @@ set -eo pipefail
 
 curl_command="curl --silent --location"
 releases_path="https://www.smlnj.org/dist/working/"
-regular_expression="[0-9.]*(?=-README.html)"
+regular_expression="[0-9.]*-README.html"
+regular_expression_numbers="[0-9.]*"
 
 # stolen from https://github.com/rbenv/ruby-build/pull/631/files#diff-fdcfb8a18714b33b07529b7d02b54f1dR942
 function sort_versions() {
@@ -27,6 +28,6 @@ function sort_versions() {
     LC_ALL=C sort -t. -k 1,1 -k 2,2n -k 3,3n -k 4,4n -k 5,5n | awk '{print $2}'
 }
 
-versions=$(eval "$curl_command $releases_path" | grep -Po "$regular_expression" | sort_versions | xargs)
+versions=$(eval "$curl_command $releases_path" | grep -o "$regular_expression" | grep -o "$regular_expression_numbers"  | sort_versions | xargs)
 
 echo "$versions"
