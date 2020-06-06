@@ -1,7 +1,9 @@
 * asdf-sml
 An [[https://www.smlnj.org/][SML/NJ]] plugin for the [[https://asdf-vm.com][asdf version manager]].
+[[https://travis-ci.org/samontea/asdf-smlnj.svg?branch=master]]
 
 ** Prerequisites
+
 Please ensure that you have the following:
 - Some C/C++ compiler (e.g. gcc or clang).
 
