@@ -60,9 +60,9 @@ install_smlnj() {
 
   (
     echo "∗ Downloading and installing SML/NJ..."
-    curl --silent --location --create-dirs --output "$source_path" "$download_url" || fail "Could not download SML $version"
-    cd $install_path
-    tar -xzf "config.tgz" || fail "Could not find SML/NJ ${version}"
+    curl --silent --location --create-dirs --output "$source_path" "$download_url" || fail "Could not download SML $version for $platform"
+    cd "$install_path"
+    tar -xzf "config.tgz" || fail "Could not find SML/NJ $version for $platform"
     ./config/install.sh -default $architecture > /dev/null || fail "SML/NJ installation failed"
     cd -
     echo "The installation was successful!"

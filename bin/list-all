@@ -21,6 +21,6 @@ curl_command="curl --silent --location"
 releases_path="https://www.smlnj.org/dist/working/"
 regular_expression="[0-9.]*(?=-README.html)"
 
-versions=$(eval "$curl_command $releases_path" | grep -Po $regular_expression | sort | xargs)
+versions=$(eval "$curl_command $releases_path" | grep -Po "$regular_expression" | sort | xargs)
 
 echo "$versions"
