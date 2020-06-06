@@ -1,0 +1,14 @@
+* asdf-sml
+An [[https://www.smlnj.org/][SML/NJ]] plugin for the [[https://asdf-vm.com][asdf version manager]].
+
+** Prerequisites
+Please ensure that you have the following:
+- Some C/C++ compiler (e.g. gcc or clang).
+
+** Instillation
+#+begin_src sh
+  asdf plugin-add smlnj https://github.com/samontea/asdf-smlnj.git
+#+end_src
+
+** License
+[[https://www.apache.org/licenses/LICENSE-2.0][Apache License, Version 2.0]]
