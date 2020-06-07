@@ -9,3 +9,8 @@ before_script:
 os:
   - linux
   - osx
+addons:
+  homebrew:
+    packages:
+    - shellcheck
+    update: true
