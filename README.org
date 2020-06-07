@@ -1,5 +1,5 @@
 * asdf-sml
-[[https://travis-ci.org/samontea/asdf-smlnj.svg?branch=master]]
+[[https://travis-ci.org/samontea/asdf-smlnj][https://api.travis-ci.org/samontea/asdf-smlnj.svg?branch=master]]
 
 An [[https://www.smlnj.org/][SML/NJ]] plugin for the [[https://asdf-vm.com][asdf version manager]].
 
